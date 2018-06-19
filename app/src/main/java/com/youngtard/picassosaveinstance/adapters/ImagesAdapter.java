@@ -96,8 +96,8 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ImagesView
 //                    return super.equals(obj);
 //                }
 //            });
-
-            Picasso.get().load("https://source.unsplash.com/random")
+            String path = "https://source.unsplash.com/random/";
+            Picasso.get().load(path + position)
                     .networkPolicy(NetworkPolicy.NO_CACHE)
                     .memoryPolicy(MemoryPolicy.NO_CACHE)
                     .into(mImage);
